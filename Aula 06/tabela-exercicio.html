@@ -88,7 +88,6 @@
     </section>
 
     <script>
-
         var tabela = document.querySelectorAll('table tbody .aluno')
 
         console.log(tabela)
@@ -122,38 +121,44 @@
 
                 return parseFloat(td.textContent)
 
-                }
-
-            console.log(celulas)
-
-            media = calcularMedia.apply(this, notas)
-
-            // celulas[4].textContent = media 
-                
-        }
-
-        
-        function recuperarNotasDeColunas() {
-            
-            var i = 0;
-            var notas = []
-            
-            while (celulas[i]) {
-
-                if(!isNaN(celulas[i].textContent) && celulas[i].textContent !== "")
-        
-                notas.push(parseFloat(celulas[i].textContent))
-        
-                i++
-        
             }
 
-            return notas
+            console.log(notas)
+
+            var notas = recuperarNotasDeColunas(celulas)
+
+            var media = calcularMedia.apply(this, notas)
+
+            // celulas[4].textContent = media 
 
         }
 
 
-        </script>
+        function recuperarNotasDeColunas(celulas) {
+
+            var i = 0;
+            var arr = []
+
+            while (celulas[i]) {
+
+                if (!isNaN(celulas[i].textContent) && celulas[i].textContent !== "") {
+
+                    arr.push(parseFloat(celulas[i].textContent))
+
+                }
+
+                i++
+
+            }
+
+            return arr
+            console.log(arr)
+
+        }
+
+
+
+    </script>
 
 </body>
 
