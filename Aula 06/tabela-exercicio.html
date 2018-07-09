@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Curso Javascript Completo 2018</title>
+    <meta charset="utf-8">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    <script src="beluga.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Curso Javascript Completo 2018</h1>
+    </div>
+
+    <section>
+
+        <div class="container">
+
+            <h2>Média dos alunos</h2>
+            <table class="table js-tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Nota 4</th>
+                        <th>Média</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="aluno">
+                        <td class="aluno-nome">Carlos</td>
+                        <td class="aluno-n1">10</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">9</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="aluno-nome">Roberto</td>
+                        <td class="aluno-n1">5</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">6.5</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="aluno-nome">Laurencio</td>
+                        <td class="aluno-n1">8</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">7</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+
+                    <tr class="aluno">
+                        <td class="aluno-nome">Hércules</td>
+                        <td class="aluno-n1">6.5</td>
+                        <td class="aluno-n2">8.5</td>
+                        <td class="aluno-n3">10</td>
+                        <td class="aluno-n4">7.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+                    <tr class="aluno">
+                        <td class="aluno-nome">Mauro</td>
+                        <td class="aluno-n1">10</td>
+                        <td class="aluno-n2">9.5</td>
+                        <td class="aluno-n3">10</td>
+                        <td class="aluno-n4">8.5</td>
+                        <td class="aluno-m"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="resultado"></div>
+
+
+    </section>
+
+    <script>
+
+        var tabela = document.querySelectorAll('table tbody .aluno')
+
+        console.log(tabela)
+
+        var x = 0
+
+        while (tabela[x]) {
+
+            var linhaAlunos = tabela[x]
+
+            var celulas = linhaAlunos.querySelectorAll('td')
+
+            x++
+
+            console.log(celulas)
+
+            // var n1, n2, n3, n4, media
+
+            // n1 = pegarNota(celulas[1])
+            // n2 = pegarNota(celulas[2])
+            // n3 = pegarNota(celulas[3])
+            // n4 = pegarNota(celulas[4])
+
+            // console.log(n1, n2, n3, n4)
+
+            // media = calcularMedia(n1, n2, n3, n4)
+
+            // celulas[5].textContent = media.toFixed(1)
+
+            function pegarNota(td) {
+
+                return parseFloat(td.textContent)
+
+                }
+
+            console.log(celulas)
+
+            media = calcularMedia.apply(this, notas)
+
+            // celulas[4].textContent = media 
+                
+        }
+
+        
+        function recuperarNotasDeColunas() {
+            
+            var i = 0;
+            var notas = []
+            
+            while (celulas[i]) {
+
+                if(!isNaN(celulas[i].textContent) && celulas[i].textContent !== "")
+        
+                notas.push(parseFloat(celulas[i].textContent))
+        
+                i++
+        
+            }
+
+            return notas
+
+        }
+
+
+        </script>
+
+</body>
+
+</html>

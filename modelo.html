@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+
+    <head>
+
+        <title>Curso Javascript Completo 2018</title>
+
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+
+        <h1>Curso Javascript Completo 2018</h1>
+
+        <input type="text" class="caixinha" placeholder="Digite seu nome"><button onclick="explodaTudo()">Clique aqui</button></br>
+
+        <div class="gabarito">Nada aqui, por enquanto</div>
+
+    <script>
+    
+    var area = document.querySelector('.caixinha')
+
+    function explodaTudo() {
+
+        var nome = area.value
+
+        document.querySelector('.gabarito').innerHTML = '<b><i>O nome digitado é ' + nome + '</i></b>'
+
+    }    
+            
+    </script>
+
+</body>
+
+</html>

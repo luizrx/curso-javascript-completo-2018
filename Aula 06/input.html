@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <input type = "text" id = "txtNome" placeholder = "Digite seu nome, porra!!!"><button onclick='escreva()'>Clique</button><br>
+
+        <div id="msg"></div>
+        
+        <script>
+            
+               var txtNome2 = document.querySelector('#txtNome');
+
+               function escreva() {
+
+                var nome = txtNome2.placeholder   
+
+                // document.querySelector('#msg').innerHTML = 'Você digitou ' + nome + '!'
+
+                document.querySelector('#msg').innerHTML = '<b>Você digitou ' + txtNome2.value + '!</b>'
+
+               // document.querySelector('#txtNome').disabled = true
+
+                //console.log(nome)
+
+               } 
+
+                
+          
+        </script>
+        
+    </body>
+</html>
