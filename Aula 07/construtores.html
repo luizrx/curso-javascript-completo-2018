@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+    <title>Curso Javascript Completo 2018</title>
+
+    <meta charset="utf-8">
+
+    <!-- <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        
+        <script src="beluga.js"></script> -->
+
+</head>
+
+<body class>
+
+    <div class="container">
+
+        <h1>Curso Javascript Completo 2018</h1>
+
+    </div>
+
+    <script>
+
+        var Caneta = (function(window) {
+
+            'use strict';
+            console.log(this)
+
+           function _caneta(preco, cor) {
+
+                //privado
+                var color = cor || 'white'; // por meio do uso de 'var' ao invés do 'this', a variável passa a ser privada
+
+                //publicas
+                this.preco = preco || 10;
+
+                this.mudarCor = function (cor) {
+                    if (cor !== 'red' && cor !== 'blue' && cor !== 'black') {
+                        return // se o teste de validação for 'true', o 'return' irá sair da função; assim, a variável color não será alterada
+                    }
+                    color = cor;
+                }
+
+                this.pegaCor = function () { // como a variável 'color' é privada, podemos construir um método próprios para retorná-la.
+                    return color
+                }
+            }
+
+         return _caneta
+
+        })(window)
+
+    </script>
+
+</body>
+
+</html>
