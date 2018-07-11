@@ -46,7 +46,20 @@
         for (var i = 1; i <= 3; i++) {
             console.log(window['pessoa' + i].nome + ' ' + window['pessoa' + i].sobrenome)
         }
-    </script>
+
+        var pessoas = [pessoa1, pessoa2, pessoa3]
+        console.log('​pessoas', pessoas);
+
+        var x = 0;
+
+        while(pessoas[x]) {
+            console.log('O nome do usuário escolhido é ' + pessoas[x].nome + ' ' + pessoas[x].sobrenome)
+            x++
+        }
+
+     
+
+        </script>
 
 </body>
 
