@@ -1,0 +1,61 @@
+<title>Curso Javascript Completo 2018</title>
+
+<meta charset="utf-8">
+
+</head>
+
+<body class>
+
+    <div class="container">
+
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <button id="btn1" onclick="clicar()">Botão 1</button>
+
+        <button id="btn2">Botão 2</button>
+
+        <button id="btn3">Botão 3</button>
+
+    </div>
+
+    <script>
+
+        var btn2 = document.getElementById('btn2');
+        var btn3 = document.getElementById('btn3');
+
+        btn2.onclick = clicar(); // Quando estamos tratando no dom level 0 e quisermos inserir funções a partir do JS, não devemos colocar os sinais de parênteses - "()" após a função. Assim, o correto é.... btn2.onclick = clicar;
+
+        function clicar() {
+
+            alert('clicou!');
+
+            return function() {
+
+                alert('Agora eu peguei você!');
+            }
+        }
+
+        btn3.addEventListener('click', function() {
+            alert('Clicou com dom level 2');
+        })
+        
+        // no level 2 é possível atribuir mais de um evento ao mesmo elemento html
+
+        btn3.addEventListener('click', function() {
+            alert('Clicou com outro evento no level 2')
+        })
+
+        btn3.onclick = function() { // estamos usando o dom level 0 (onclick); diferentemente do que ocorre no dom level 2, apenas uma função pode ser atribuída ao evento('onclick'). Assim, no nosso exemplo, só a segunda função ('World') será acionada.
+
+            alert('Hello')
+        }
+           
+        btn3.onclick = function() {
+            alert('World')
+        }
+
+    </script>
+
+</body>
+
+</html>
