@@ -1,0 +1,60 @@
+<title>Curso Javascript Completo 2018</title>
+
+<meta charset="utf-8">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Curso Javascript Completo 2018</h1>
+
+        <form action="#">
+
+            <textarea id="msg" cols=50 rows=10></textarea>
+
+        </form>
+
+    </div>
+  
+
+    <script>
+
+       (function() {
+
+           $msg = document.getElementById('msg');
+
+           $msg.addEventListener('keypress', keypress);
+           $msg.addEventListener('keyup', keyup);
+           $msg.addEventListener('keydown', keydown);
+           $msg.addEventListener('input', input);
+
+
+           function keypress(e) {
+               console.log('keypress', this.value)
+           }
+
+
+            function keyup(e) {
+               console.log('keyup', this.value)
+           }
+
+
+            function keydown(e) {
+               console.log('keydown',this.value)
+           }   
+           
+           
+           function input(e) {
+               console.log('input',this.value)
+           }          
+
+        })()     
+
+        
+    </script>
+
+</body>
+
+</html>
